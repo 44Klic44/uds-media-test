@@ -1,0 +1,44 @@
+@import './variables';
+@import './fonts';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-euclid-medium;
+  font-weight: $weight-medium;
+  background: #F8F8F8;
+  color: $uds-text-dark;
+}
+
+/* Заголовок H1 */
+.text-h1 {
+  font-family: $font-euclid-bold;
+  font-weight: $weight-bold;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+/* Параграф */
+.text-p {
+  font-family: $font-euclid-medium;
+  font-weight: $weight-medium;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+/* Кнопка */
+.btn {
+  font-family: $font-roboto-regular;
+  font-weight: $weight-regular;
+  font-size: 16px;
+  color: #fff;
+  background-color: $uds-red-dark;
+  border: none;
+  border-radius: $uds-radius;
+  padding: 12px 24px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($uds-red-dark, 7%);
+  }
+}
