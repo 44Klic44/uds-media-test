@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-euclid-medium;
+  font-size: 14px;
+  color: $uds-text-dark;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.starSvg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: #FFD24D; 
+}
+
+.value {
+  color: $uds-text-grey;
+  font-size: 14px;
+}

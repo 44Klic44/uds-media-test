@@ -6,6 +6,7 @@ import './styles/global.scss';
 import { cards } from './data/udsPlaces';
 import Sprite from './components/Sprite/Sprite';
 import Icon from './components/icon/Icon';
+import UdsCard from "./components/Card/UdsCard"; 
 
 function App() {
   
@@ -16,7 +17,14 @@ function App() {
       <Sprite />
       
      
-   
+    <div className="uds-cards-grid">
+      {cards.map(card => (
+        <UdsCard
+          key={card.id}
+          {...card}   // ← ВАЖНО: проброс всех данных карточки
+        />
+      ))}
+    </div>
         
        {/* Иконка */}
             <Icon name="uds-icon-distance" size={20} color="black" />
@@ -34,16 +42,6 @@ function App() {
 
 
 
-{/* КАРТОЧКИ */}
-    {cards.map((card) => (
-        <div key={card.id}>
-          <h2>{card.title}</h2>
-          <img src={card.image} alt={card.title} style={{ width: '200px' }} />
-        </div>
-      ))}
-     <h1 className="text-h1">Euclid Flex Bold — Заголовок</h1>
-      <p className="text-p">Euclid Flex Medium — Параграф</p>
-      <button className="btn">Roboto Regular — Кнопка</button>
     </>
   )
 }
