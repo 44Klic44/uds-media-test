@@ -4,12 +4,50 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import './styles/global.scss'; 
 import { cards } from './data/udsPlaces';
+import Sprite from './components/Sprite/Sprite';
+import Icon from './components/icon/Icon';
 
 function App() {
   const [count, setCount] = useState(0)
+  
+
+  // Функция для проверки существования спрайта
+  const checkSprite = () => {
+    const sprite = document.getElementById('uds-icon-distance');
+    console.log('Sprite exists:', !!sprite);
+    console.log('All symbols:', document.querySelectorAll('symbol'));
+  }
+
 
   return (
     <>
+      {/* Sprite  */}
+      <Sprite />
+      
+     
+      <div style={{ 
+        padding: '40px', 
+        border: '3px solid green', 
+        backgroundColor: '#f0f8ff',
+        margin: '20px'
+      }}>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+            <Icon name="uds-icon-distance" size={40} color="red" />
+            <span>Иконка 40px красная</span>
+          </div>
+
+        
+
+       
+        </div>
+      </div>
+
+
+
+
+{/* КАРТОЧКИ */}
     {cards.map((card) => (
         <div key={card.id}>
           <h2>{card.title}</h2>
