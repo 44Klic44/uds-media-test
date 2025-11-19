@@ -8,16 +8,7 @@ import Sprite from './components/Sprite/Sprite';
 import Icon from './components/icon/Icon';
 
 function App() {
-  const [count, setCount] = useState(0)
   
-
-  // Функция для проверки существования спрайта
-  const checkSprite = () => {
-    const sprite = document.getElementById('uds-icon-distance');
-    console.log('Sprite exists:', !!sprite);
-    console.log('All symbols:', document.querySelectorAll('symbol'));
-  }
-
 
   return (
     <>
@@ -25,24 +16,20 @@ function App() {
       <Sprite />
       
      
-      <div style={{ 
-        padding: '40px', 
-        border: '3px solid green', 
-        backgroundColor: '#f0f8ff',
-        margin: '20px'
-      }}>
+   
         
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-            <Icon name="uds-icon-distance" size={40} color="red" />
-            <span>Иконка 40px красная</span>
-          </div>
+       {/* Иконка */}
+            <Icon name="uds-icon-distance" size={20} color="black" />
+           
+<Icon name="uds-icon-address" size={32} color="blue" />
+<Icon name="uds-icon-metro" size={32} color="green" />
+<Icon name="uds-icon-home" size={32} color="orange" />
+<Icon name="uds-icon-image" size={32} color="purple" />
+<Icon name="uds-icon-360" size={32} color="brown" />
+<Icon name="uds-icon-video" size={32} color="pink" />
 
         
 
-       
-        </div>
-      </div>
 
 
 
