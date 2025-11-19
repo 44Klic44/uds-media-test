@@ -3,6 +3,7 @@ import styles from './UdsCard.module.scss'
 import UdsRating from '../UdsRating/UdsRating'
 import UdsButton from '../UdsButton/UdsButton'
 
+
 const UdsCard = ({
   id,
   title,
@@ -36,17 +37,17 @@ const UdsCard = ({
 
         {/* home icon */}
         <div className={styles.homeIcon}>
-          <svg width="58" height="58" aria-hidden="true">
-            <use href="/src/assets/icons/sprite.svg#uds-icon-home" />
+           <svg width="58" height="58" color="#FF5D54">
+            <use xlinkHref="#uds-icon-home" />
           </svg>
         </div>
 
         {/*  3 icons */}
         <div className={styles.topIcons}>
           <div className={styles.topIconsInner}>
-            <svg aria-hidden="true"><use href="/src/assets/icons/sprite.svg#uds-icon-image" /></svg>
-            <svg aria-hidden="true"><use href="/src/assets/icons/sprite.svg#uds-icon-360" /></svg>
-            <svg aria-hidden="true"><use href="/src/assets/icons/sprite.svg#uds-icon-video" /></svg>
+            <svg aria-hidden="true" width="22.47" height="19"> <use xlinkHref="#uds-icon-image" /></svg>
+            <svg aria-hidden="true" width="30" height="28"> <use xlinkHref="#uds-icon-360" /></svg>
+            <svg aria-hidden="true" width="22" height="14"> <use xlinkHref="#uds-icon-video" /></svg>
           </div>
         </div>
 
