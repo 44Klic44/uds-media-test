@@ -63,16 +63,12 @@ const UdsCard = ({
         <div className={styles.titleRow}>
           <h3 className={styles.title}>{title}</h3>
 
-          <button
-            className={`${styles.favBtn} ${isFav ? styles.favActive : ''}`}
-            onClick={toggleFav}
-            aria-pressed={isFav}
-            aria-label={isFav ? 'Убрать из избранного' : 'Добавить в избранное'}
-          >
-            <svg width="24" height="22" aria-hidden="true">
-              <use href="/src/assets/icons/sprite.svg#uds-icon-heart" />
+         <button className={styles.iconsHeart} >
+            <svg  width="26" height="24" >
+              <use href="/src/assets/icons/heart-false.svg" />
+              
             </svg>
-          </button>
+         </button>
         </div>
 
         {/* Появляющаяся кнопка при hover */}
