@@ -51,10 +51,12 @@ const UdsCard = ({
           </div>
         </div>
 
-        {/* text*/}
-        <div className={styles.bottomOverlay}>
-          <p className={styles.description}>{description}</p>
-        </div>
+        {/* Описание если текста в карточке нет тогда скрываем блок*/}
+        {description && (
+  <div className={styles.bottomOverlay}>
+    <p className={styles.description}>{description}</p>
+  </div>
+)}
       </div>
 
       <div className={styles.body}>
