@@ -37,8 +37,8 @@
   position: absolute;
   left: 15px;
   top: 15px;
-  width: 58px;
-  height: 58px;
+  width: 54px;
+  height: 54px;
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -97,20 +97,20 @@
 
 .description {
   margin: 0;
-  font-family: $weight-regular;
-  font-weight: 300;
+  font-family: $font-roboto-light;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 160%;
   color: #fff;
   text-align: left;
+  letter-spacing: 0.2px;
 }
 
 
 .body {
-  padding: 15px 16px 18px;
+  padding: 15px 16px 18px 0px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
   flex: 1;
 }
 
@@ -129,6 +129,10 @@
   margin: 0;
   letter-spacing: 0;
   margin-top: 0;
+
+  &:hover{
+    color: #FF4338;
+  }
 }
 
 
@@ -172,7 +176,7 @@
 
 .infoLine {
   display: flex;
-  gap: 12px;
+  margin-top: 0px;
   align-items: center;
 }
 
@@ -180,6 +184,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 5px;
   color: $uds-text-grey;
   font-family: $font-euclid-medium;
   font-weight: $weight-medium;

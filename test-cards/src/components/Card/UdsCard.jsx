@@ -37,7 +37,7 @@ const UdsCard = ({
 
         {/* home icon */}
         <div className={styles.homeIcon}>
-           <svg width="58" height="58" color="#FF5D54">
+           <svg width="58" height="59" color="#FF5D54">
             <use xlinkHref="#uds-icon-home" />
           </svg>
         </div>
@@ -80,19 +80,19 @@ const UdsCard = ({
 
         <div className={styles.infoLine}>
           <div className={styles.infoItem}>
-            <svg className={styles.infoIcon} width="15" height="18"><use href="/src/assets/icons/sprite.svg#uds-icon-address" /></svg>
+            <svg className={styles.infoIcon} width="15" height="18"><use xlinkHref="#uds-icon-address" /></svg>
             <span className={styles.infoText}>{address}</span>
           </div>
 
           <div className={styles.infoItem} style={{ marginLeft: 30 }}>
-            <svg className={styles.infoIcon} width="15" height="18"><use href="/src/assets/icons/sprite.svg#uds-icon-distance" /></svg>
+            <svg className={styles.infoIcon} width="15" height="18"><use xlinkHref="#uds-icon-distance" /></svg>
             <span className={styles.infoText}>{distance}</span>
           </div>
         </div>
 
         <div className={styles.infoLine}>
           <div className={styles.infoItem}>
-            <svg className={styles.infoIcon} width="15" height="18"><use href="/src/assets/icons/sprite.svg#uds-icon-metro" /></svg>
+            <svg className={styles.infoIcon} width="15" height="18"><use xlinkHref="#uds-icon-metro" /></svg>
             <span className={styles.infoText}>{metro}</span>
           </div>
         </div>

@@ -16,7 +16,7 @@ export const cards = [
     metro: "Арбатская, 3 мин",
     rating: 4.56,
     link: "/property/1",
-    image: card1Img,
+    image: card2Img,
     favorite: false,
     icons: {
       home: "/icons/home.svg",
