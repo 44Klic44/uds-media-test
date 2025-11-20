@@ -63,12 +63,23 @@ const UdsCard = ({
         <div className={styles.titleRow}>
           <h3 className={styles.title}>{title}</h3>
 
-         <button className={styles.iconsHeart} >
-            <svg  width="26" height="24" >
-              <use href="/src/assets/icons/heart-false.svg" />
-              
+           <button 
+            className={styles.iconsHeart} 
+            onClick={toggleFav}
+          >
+            <svg width="26" height="24">
+            
+              {isFav ? (
+                // Если isFav = true - показываем красную иконку
+                <use xlinkHref="#uds-icon-heart-filled" />
+              ) : (
+                // Если isFav = false - показываем прозрачную иконку
+                <use xlinkHref="#uds-icon-heart-outline" />
+              )}
+
+             
             </svg>
-         </button>
+          </button>
         </div>
 
         {/* Появляющаяся кнопка при hover */}
