@@ -70,10 +70,10 @@ const UdsCard = ({
             <svg width="26" height="24">
             
               {isFav ? (
-                // Если isFav = true - показываем красную иконку
+               
                 <use xlinkHref="#uds-icon-heart-filled" />
               ) : (
-                // Если isFav = false - показываем прозрачную иконку
+               
                 <use xlinkHref="#uds-icon-heart-outline" />
               )}
 

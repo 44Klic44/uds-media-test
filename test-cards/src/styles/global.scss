@@ -14,7 +14,6 @@ body {
   .uds-container {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 24px;
   display: grid;
   grid-template-columns: repeat(3, 420px); 
   grid-auto-rows: auto;
@@ -27,7 +26,7 @@ body {
   grid-template-columns: repeat(3, 420px); 
   justify-content: center;
   gap: 50px 30px;
- 
+ padding: 60px 0px 220px 0px;
 
   
   @media (max-width: 1000px) {
