@@ -88,7 +88,7 @@
   bottom: 0;
   padding:  15px;
   background: rgba(0,0,0,0.5); 
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   color: #fff;
   z-index: 4;
   max-height: 45%;
@@ -108,7 +108,7 @@
 
 
 .body {
-  padding: 15px 16px 18px 0px;
+  padding: 13px 16px 18px 0px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -176,7 +176,7 @@
 
 .infoLine {
   display: flex;
-  margin-top: 0px;
+  margin-top: 4px;
   align-items: center;
 }
 
@@ -184,7 +184,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 5px;
+  margin-top: 3px;
   color: $uds-text-grey;
   font-family: $font-euclid-medium;
   font-weight: $weight-medium;
@@ -194,16 +194,17 @@
 
 .infoIcon {
   opacity: 0.8;
-  width: 15px;
-  height: 18px;
   display: block;
   flex-shrink: 0;
   fill: #818181;
 }
 
+.infoMetro {
+ margin-top: 0px;
+}
 
-.ratingRow {
-  margin-top: 8px;
+.ratingRow  {
+  margin-top: 9px;
 }
 
 @media (max-width: 1024px) {

@@ -80,20 +80,20 @@ const UdsCard = ({
 
         <div className={styles.infoLine}>
           <div className={styles.infoItem}>
-            <svg className={styles.infoIcon} width="15" height="18"><use xlinkHref="#uds-icon-address" /></svg>
+            <svg className={styles.infoIcon} width="15" height="18" color='#818181'><use xlinkHref="#uds-icon-address" /></svg>
             <span className={styles.infoText}>{address}</span>
           </div>
 
           <div className={styles.infoItem} style={{ marginLeft: 30 }}>
-            <svg className={styles.infoIcon} width="15" height="18"><use xlinkHref="#uds-icon-distance" /></svg>
+            <svg className={styles.infoIcon} width="13.39" height="15" color='#818181'><use xlinkHref="#uds-icon-distance" /></svg>
             <span className={styles.infoText}>{distance}</span>
           </div>
         </div>
 
         <div className={styles.infoLine}>
           <div className={styles.infoItem}>
-            <svg className={styles.infoIcon} width="15" height="18"><use xlinkHref="#uds-icon-metro" /></svg>
-            <span className={styles.infoText}>{metro}</span>
+            <svg className={styles.infoIcon} width="22" height="32" color='#818181'><use xlinkHref="#uds-icon-metro" /></svg>
+            <span className={styles.infoMetro}>{metro}</span>
           </div>
         </div>
 
