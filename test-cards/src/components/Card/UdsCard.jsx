@@ -99,7 +99,7 @@ const UdsCard = ({
           </div>
         </div>
 
-        <div className={styles.infoLine}>
+        <div className={styles.infoMetro}>
           <div className={styles.infoItem}>
             <svg className={styles.infoIcon} width="22" height="32" color='#818181'><use xlinkHref="#uds-icon-metro" /></svg>
             <span className={styles.infoMetro}>{metro}</span>

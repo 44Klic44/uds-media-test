@@ -4,25 +4,26 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: $font-euclid-medium;
+  font-family: $font-roboto-regular;
   font-size: 14px;
   color: $uds-text-dark;
 }
 
 .stars {
   display: flex;
-  gap: 2px;
+  gap: 4px;
   align-items: center;
 }
 
 .starSvg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   display: block;
   fill: #FFD24D; 
 }
 
 .value {
-  color: $uds-text-grey;
+  color: $uds-text-dark;
   font-size: 14px;
+  margin-bottom: 3px;
 }
