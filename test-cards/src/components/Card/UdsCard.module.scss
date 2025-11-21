@@ -2,7 +2,6 @@
 
 .card {
   width: 420px;
-
   background: #fff;
   border-radius: $uds-radius;
   overflow: hidden;
@@ -10,14 +9,11 @@
   flex-direction: column;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
-
- 
 }
 
 .imageWrap {
   position: relative;
   width: 100%;
- 
   height: 348px;
   overflow: hidden;
   background: #eee;
@@ -29,7 +25,6 @@
   object-fit: cover; 
   display: block;
 }
-
 
 .homeIcon {
   position: absolute;
@@ -49,7 +44,6 @@
     height: 54px;
   }
 }
-
 
 .topIcons {
   position: absolute;
@@ -73,24 +67,65 @@
   justify-content: center;
 
   svg {
-    
-  max-width: 30px;
+    max-width: 30px;
   }
 }
 
+/* Кнопка "Подробнее" для мобильных */
+.mobileDetailsButton {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-euclid-medium;
+  font-size: 14px;
+  color: $uds-text-dark;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  
+  @media (min-width: 1025px) {
+    display: none;
+  }
+  
+  &:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  svg {
+    opacity: 0.7;
+  }
+}
 
+/* Стили для десктопного описания */
 .bottomOverlay {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  padding:  15px;
-  background: rgba(0,0,0,0.5); 
+  padding: 15px;
+  background: rgba(0,0,0,0.5);
   backdrop-filter: blur(10px);
   color: #fff;
   z-index: 4;
   max-height: 45%;
   overflow: auto;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .description {
@@ -103,7 +138,6 @@
   text-align: left;
   letter-spacing: 0.2px;
 }
-
 
 .body {
   padding: 15px 0px 18px 0px;
@@ -135,12 +169,6 @@
   }
 }
 
-
-.favBtn {
-
-}
-
-
 .ctaWrap {
   margin-top: 6px;
   height: 0;
@@ -155,7 +183,6 @@
   height: 60px;
   opacity: 1;
 }
-
 
 .infoLine {
   display: flex;
@@ -198,8 +225,6 @@
   border-radius: 50%;
   transition: background-color 0.2s ease;
   
-
-  
   svg {
     display: block;
     transition: transform 0.2s ease;
@@ -208,6 +233,56 @@
   &:active svg {
     transform: scale(0.9);
   }
+}
+
+/* Стили для контента внутри модалки */
+.modalContentWrapper {
+  padding: 10px 0;
+}
+
+.modalMeta {
+  margin-bottom: 20px;
+}
+
+.modalAddress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-euclid-medium;
+  font-size: 16px;
+  color: $uds-text-grey;
+  
+  svg {
+    opacity: 0.7;
+  }
+}
+
+.modalDescription {
+  margin: 25px 0;
+  
+  .descriptionTitle {
+    font-family: $font-euclid-bold;
+    font-size: 18px;
+    color: $uds-text-dark;
+    margin: 0 0 12px;
+  }
+  
+  p {
+    font-family: $font-roboto-light;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $uds-text-dark;
+    margin: 0;
+  }
+}
+
+.modalActions {
+  margin-top: 30px;
+}
+
+.modalButton {
+  width: 100%;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {
@@ -219,7 +294,6 @@
   .title { font-size: 20px; }
 }
 
-
 @media (max-width: 480px) {
   .card {
     width: 100%;
@@ -230,4 +304,11 @@
   .ctaWrap { height: 60px; }
   .topIcons { right: 10px; top: 10px; width: 140px; height: 46px; }
   .homeIcon { left: 12px; top: 12px; width: 50px; height: 50px; }
+  
+  .mobileDetailsButton {
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
 }
