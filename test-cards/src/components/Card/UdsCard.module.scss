@@ -79,9 +79,9 @@
   }
 }
 
-/* Кнопка "Подробнее" для мобильных */
+/* Кнопка "Подробнее" для мобильных и планшетов */
 .mobileDetailsButton {
-  // position: absolute;
+  position: absolute;
   bottom: 15px;
   right: 15px;
   background: rgba(255, 255, 255, 0.95);
@@ -99,6 +99,7 @@
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
   
+  /* Скрываем только на десктопе (1081px и выше) */
   @media (min-width: 1081px) {
     display: none;
   }
@@ -369,7 +370,7 @@
   }
 
   .title {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.3;
     max-width: none;
     margin-bottom: 0;
@@ -425,45 +426,12 @@
   }
 
   .infoItem {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .ratingRow {
     margin-top: 8px;
   }
   
-/* Кнопка "Подробнее" для мобильных и планшета */
-.mobileDetailsButton {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  background: rgba(255, 255, 255, 0.95);
-  border: none;
-  border-radius: 20px;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: $font-euclid-medium;
-  font-size: 14px;
-  color: $uds-text-dark;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(10px);
-  
-  /* Скрываем на десктопе (1081px и выше) */
-  @media (min-width: 1081px) {
-    display: none;
-  }
-  
-  &:active {
-    transform: scale(0.95);
-    background: rgba(255, 255, 255, 1);
-  }
-  
-  svg {
-    opacity: 0.7;
-  }
-}
+
 }

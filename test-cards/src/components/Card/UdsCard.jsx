@@ -81,7 +81,7 @@ const UdsCard = ({
           )}
 
           {/* Для мобильных: кнопка открытия попапа */}
-          {isMobile && description && (
+          { description && (
             <button 
               className={styles.mobileDetailsButton}
               onClick={openModal}
