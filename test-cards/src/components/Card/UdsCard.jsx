@@ -15,6 +15,8 @@ const UdsCard = ({
   link,
   image,
   favorite,
+  showButton = false, 
+  buttonText = "ПЕРЕЙТИ",
   icons = {}
 }) => {
   const [isFav, setIsFav] = useState(!!favorite)
@@ -108,9 +110,11 @@ const UdsCard = ({
             </button>
           </div>
 
-          <div className={`${styles.ctaWrap} ${hovered ? styles.ctaVisible : ''}`}>
-            <UdsButton as="a" href={link}>ПЕРЕЙТИ</UdsButton>
-          </div>
+           {showButton && (
+  <div className={styles.ctaWrap}>
+    <UdsButton as="a" href={link}>{buttonText}</UdsButton>
+  </div>
+)}
 
           <div className={styles.infoLine}>
             <div className={styles.infoItem}>

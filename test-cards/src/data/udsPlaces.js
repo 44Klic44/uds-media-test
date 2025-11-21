@@ -18,6 +18,8 @@ export const cards = [
     link: "/property/1",
     image: card1Img,
     favorite: false,
+     showButton: false, 
+    buttonText: "ПЕРЕЙТИ", 
     icons: {
       home: "/icons/home.svg",
       image: "/images/property1.jpg",
@@ -36,6 +38,8 @@ export const cards = [
     link: "/property/2",
     image: card2Img,
     favorite: false,
+    showButton: true, 
+    buttonText: "ПЕРЕЙТИ", 
     icons: {
       home: "/icons/home.svg",
       image: "/images/property2.jpg",
@@ -54,6 +58,8 @@ export const cards = [
     link: "/property/3",
     image: card3Img ,
     favorite: false,
+     showButton: false, 
+    buttonText: "ПЕРЕЙТИ", 
     icons: {
       home: "/icons/home.svg",
       image: "/images/property3.jpg",
@@ -72,6 +78,8 @@ export const cards = [
     link: "/property/4",
     image: card4Img,
     favorite: false,
+     showButton: false, 
+    buttonText: "ПЕРЕЙТИ", 
     icons: {
       home: "/icons/home.svg",
       image: "/images/property4.jpg",
@@ -90,6 +98,8 @@ export const cards = [
     link: "/property/5",
     image: card2Img,
     favorite: false,
+     showButton: false, 
+    buttonText: "ПЕРЕЙТИ", 
     icons: {
       home: "/icons/home.svg",
       image: "/images/property5.jpg",
@@ -108,6 +118,8 @@ export const cards = [
     link: "/property/6",
     image: card1Img,
     favorite: false,
+     showButton: false, 
+    buttonText: "ПЕРЕЙТИ", 
     icons: {
       home: "/icons/home.svg",
       image: "/images/property6.jpg",

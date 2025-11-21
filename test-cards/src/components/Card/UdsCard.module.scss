@@ -17,6 +17,7 @@
   height: 348px;
   overflow: hidden;
   background: #eee;
+  border-radius: 4px;
 }
 
 .image {
@@ -73,7 +74,7 @@
 
 /* Кнопка "Подробнее" для мобильных */
 .mobileDetailsButton {
-  position: absolute;
+  // position: absolute;
   bottom: 15px;
   right: 15px;
   background: rgba(255, 255, 255, 0.95);
@@ -87,9 +88,9 @@
   font-size: 14px;
   color: $uds-text-dark;
   cursor: pointer;
-  z-index: 10;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(10px);
+  // z-index: 10;
+  // transition: all 0.2s ease;
+  // backdrop-filter: blur(10px);
   
   @media (min-width: 1025px) {
     display: none;
@@ -171,12 +172,11 @@
 
 .ctaWrap {
   margin-top: 6px;
-  height: 0;
-  overflow: hidden;
-  transition: height 0.28s ease, opacity 0.28s ease;
-  opacity: 0;
+  height: auto;
+  opacity: 1;
   display: flex;
   align-items: center;
+
 }
 
 .ctaVisible {
