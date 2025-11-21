@@ -10,12 +10,14 @@
   color: #fff;
   font-family: $font-euclid-medium;
   font-weight: $weight-bold;
-  border-radius: 8px;
+  border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
+
   text-decoration: none;
   border: none;
-  cursor: pointer;
+      letter-spacing: 0px;
+    cursor: pointer;
+    font-size: 14px;
   // transition: transform 0.18s ease, filter 0.18s ease;
   font-size: 16px;
 transition: all 0.3s ease;
