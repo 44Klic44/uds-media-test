@@ -74,7 +74,7 @@ const UdsCard = ({
           </div>
 
           {/* Для десктопа: описание при ховере */}
-          {!isMobile && description && (
+          { description && (
             <div className={`${styles.bottomOverlay} ${hovered ? styles.visible : ''}`}>
               <p className={styles.description}>{description}</p>
             </div>

@@ -31,6 +31,7 @@
   height: 100%;
   object-fit: cover; 
   display: block;
+  border-radius: 4px;
 }
 
 .homeIcon {
@@ -94,12 +95,12 @@
   font-size: 14px;
   color: $uds-text-dark;
   cursor: pointer;
-  // z-index: 10;
-  // transition: all 0.2s ease;
-  // backdrop-filter: blur(10px);
+  z-index: 10;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
   
-  @media (min-width: 1025px) {
-    display: block;
+  @media (min-width: 1081px) {
+    display: none;
   }
   
   &:active {
@@ -332,6 +333,7 @@
     justify-items: center;
     gap: 30px;
     padding: 40px 0px 120px 0px;
+            
   }
 
   .card {
@@ -339,6 +341,7 @@
     height: 277px;
     flex-direction: row;
     padding: 0;
+    margin: 0 auto;
   }
 
   .imageWrap {
@@ -429,33 +432,38 @@
     margin-top: 8px;
   }
   
-  /* Кнопка "Подробнее" для планшета */
-  .mobileDetailsButton {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-    background: rgba(255, 255, 255, 0.95);
-    border: none;
-    border-radius: 20px;
-    padding: 8px 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: $font-euclid-medium;
-    font-size: 13px;
-    color: $uds-text-dark;
-    cursor: pointer;
-    z-index: 10;
-    transition: all 0.2s ease;
-    backdrop-filter: blur(10px);
-    
-    &:active {
-      transform: scale(0.95);
-      background: rgba(255, 255, 255, 1);
-    }
-    
-    svg {
-      opacity: 0.7;
-    }
+/* Кнопка "Подробнее" для мобильных и планшета */
+.mobileDetailsButton {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-euclid-medium;
+  font-size: 14px;
+  color: $uds-text-dark;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  
+  /* Скрываем на десктопе (1081px и выше) */
+  @media (min-width: 1081px) {
+    display: none;
   }
+  
+  &:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  svg {
+    opacity: 0.7;
+  }
+}
 }
