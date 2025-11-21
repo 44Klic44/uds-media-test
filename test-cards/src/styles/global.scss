@@ -28,8 +28,10 @@ body {
   gap: 30px 30px;
  padding: 60px 0px 220px 0px;
 
-  
-  @media (max-width: 1000px) {
+   @media (max-width: 1321px) {
+   grid-template-columns: repeat(3, 338px); 
+  }
+  @media (max-width: 1080px) {
     grid-template-columns: 1fr;
   }
 

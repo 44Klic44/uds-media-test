@@ -9,6 +9,12 @@
   flex-direction: column;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
+
+  @media (max-width: 1321px) {
+   width: 338px;
+  }
+
+
 }
 
 .imageWrap {
@@ -202,6 +208,10 @@
   font-weight: $weight-medium;
   font-size: 16px;
   line-height: 1;
+
+    @media (max-width: 1321px) {
+   font-size: 14px;
+  }
 }
 
 .infoIcon {
