@@ -87,18 +87,76 @@ const UdsCard = ({
       >
         <div className={styles.imageWrap}>
           <img src={currentImage} alt={title} className={styles.image} />
-          <div className={styles.homeIcon}>
-            <svg aria-label="Перейти на страницу культурного обьекта" color="#FF5D54">
-              <use xlinkHref="#uds-icon-home" />
-            </svg>
-          </div>
-          <div className={styles.topIcons}>
-            <div className={styles.topIconsInner}>
-              <svg aria-label="Открыть галереию изображений культурного объекта" className={styles.topIconsGallery} aria-hidden="true" > <use xlinkHref="#uds-icon-image" /></svg>
-              <svg aria-label="Круговой обзор культурного объекта в 360 градусов" className={styles.topIconsGradus} aria-hidden="true" > <use xlinkHref="#uds-icon-360" /></svg>
-              <svg aria-label="Видео экскурсия культурного объекта" className={styles.topIconsVideo} aria-hidden="true" > <use xlinkHref="#uds-icon-video" /></svg>
-            </div>
-          </div>
+          
+         <a 
+  href={icons.home || "#"} 
+  className={styles.homeIcon}
+  aria-label={`Перейти на главную страницу объекта ${currentTitle}`}
+  onClick={(e) => {
+    if (!icons.home || icons.home === "#") {
+      e.preventDefault();
+    }
+  }}
+>
+  <svg color="#FF5D54" aria-hidden="Перейти на страницу культурного обьекта">
+    <use xlinkHref="#uds-icon-home" />
+  </svg>
+</a>
+
+ <div className={styles.topIcons}>
+    <div className={styles.topIconsInner}>
+
+      <a 
+        href={icons.image || "#"} 
+        className={styles.mediaLink}
+        aria-label={`Посмотреть галерею изображений ${currentTitle}`}
+        onClick={(e) => {
+          if (!icons.image || icons.image === "#") {
+            e.preventDefault();
+          }
+        }}
+      >
+        <svg className={styles.topIconsGallery} aria-hidden="true">
+          <use xlinkHref="#uds-icon-image" />
+        </svg>
+      </a>
+      
+     
+      <a 
+        href={icons.view360 || "#"} 
+        className={styles.mediaLink}
+        aria-label={`3D тур по объекту ${currentTitle}`}
+        onClick={(e) => {
+          if (!icons.view360 || icons.view360 === "#") {
+            e.preventDefault();
+          }
+        }}
+      >
+        <svg className={styles.topIconsGradus} aria-hidden="true">
+          <use xlinkHref="#uds-icon-360" />
+        </svg>
+      </a>
+      
+
+      <a 
+        href={icons.video || "#"} 
+        className={styles.mediaLink}
+        aria-label={`Видео об объекте ${currentTitle}`}
+        onClick={(e) => {
+          if (!icons.video || icons.video === "#") {
+            e.preventDefault();
+          }
+        }}
+      >
+        <svg className={styles.topIconsVideo} aria-hidden="true">
+          <use xlinkHref="#uds-icon-video" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+
+
           { description && deviceType === 'desktop' && (
             <div className={`${styles.bottomOverlay} ${hovered ? styles.visible : ''}`}>
               <p className={styles.description}>{description}</p>
@@ -185,6 +243,7 @@ const UdsCard = ({
               href={link}
               className={styles.modalButton}
               onClick={closeModal}
+              aria-label="Посетить культурный объект"
             >
               ПОСЕТИТЬ ОБЪЕКТ
             </UdsButton>

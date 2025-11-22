@@ -29,16 +29,16 @@ export const cards = [
     showButton: false, 
     buttonText: "ПЕРЕЙТИ", 
     icons: {
-      home: "/icons/home.svg",
-      image: "/images/property1.jpg",
-      video: "/videos/property1.mp4",
-      view360: "/360/property1.html"
+      home: "https://um.mos.ru/houses/dokhodnyy-dom-a-a-panteleeva/",
+      image: "https://um.mos.ru/houses/dokhodnyy-dom-a-a-panteleeva/",
+      video: "https://um.mos.ru/houses/dokhodnyy-dom-a-a-panteleeva/",
+      view360: "https://um.mos.ru/houses/dokhodnyy-dom-a-a-panteleeva/"
     }
   },
   {
     id: 2,
     title: "Москва в кино",
-    description: "Трехэтажное здание с подвалом и мезонином на Старой Басманной улице было построено в 1874 году.",
+    description: "Кинопарк «Москино». Здесь воссоздана архитектура центральных столичных улиц, что позволяет проводить съёмки, не перекрывая движение в городе. В 2024 году в локации «Центр Москвы» прошли съёмки таких проектов, как «Баба Яга спасает Новый год», «Москва слезам не верит.",
     image: card2Img,
     tabletTitle: "Доходный дом Пантелеева",
     tabletImage: card6Img,
@@ -53,16 +53,16 @@ export const cards = [
     showButton: true, 
     buttonText: "ПЕРЕЙТИ", 
     icons: {
-      home: "/icons/home.svg",
-      image: "/images/property2.jpg",
-      video: "/videos/property2.mp4",
-      view360: "/360/property2.html"
+      home: "https://um.mos.ru/quests/moskva-v-kino/",
+      image: "https://um.mos.ru/quests/moskva-v-kino/",
+      video: "https://um.mos.ru/quests/moskva-v-kino/",
+      view360: "https://um.mos.ru/quests/moskva-v-kino/"
     }
   },
   {
     id: 3,
     title: "Городская усадьба С.Б.Куракина. Главный дом",
-    description: "Трехэтажное здание с подвалом и мезонином на Старой Басманной улице было построено в 1874 году.",
+    description: "Первоначально на участке был создан «Шпиталь» (Странноприимный дом, в обиходной речи – Богадельня), учрежденный согласно завещанию сподвижника Петра I, князя Бориса Ивановича Куракина (1676 – 1727), занимавшего с 1716 г. пост посла в Париже.",
     image: card3Img,
     tabletTitle: "Городская усадьба С.Б.Куракина. Главный дом",
     tabletImage: card7Img,
@@ -77,16 +77,16 @@ export const cards = [
     showButton: false, 
     buttonText: "ПЕРЕЙТИ", 
     icons: {
-      home: "/icons/home.svg",
-      image: "/images/property3.jpg",
-      video: "/videos/property3.mp4",
-      view360: "/360/property3.html"
+      home: "https://um.mos.ru/houses/gorodskaya-usadba-s-b-kurakina-glavnyy-dom/",
+      image: "https://um.mos.ru/houses/gorodskaya-usadba-s-b-kurakina-glavnyy-dom/",
+      video: "https://um.mos.ru/houses/gorodskaya-usadba-s-b-kurakina-glavnyy-dom/",
+      view360: "https://um.mos.ru/houses/gorodskaya-usadba-s-b-kurakina-glavnyy-dom/"
     }
   },
   {
     id: 4,
     title: "Усадьба в современной Москве",
-    description: "Трехэтажное здание с подвалом и мезонином на Старой Басманной улице было построено в 1874 году.",
+    description: "Доходный дом купца Пантеле́ева — историческое здание в Басманном районе Москвы, памятник культурного наследия. Построен в 1874-м году для купца Алексея Александровича Пантелеева по проекту архитектора Николая Колыбелина. Представляет собой каменное трёхэтажное здание с подвалом и мезонином.",
     image: card4Img,
     tabletTitle: "Доходный дом Пантелеева",
     tabletImage: card10Img,
@@ -101,16 +101,16 @@ export const cards = [
     showButton: false, 
     buttonText: "ПЕРЕЙТИ", 
     icons: {
-      home: "/icons/home.svg",
-      image: "/images/property4.jpg",
-      video: "/videos/property4.mp4",
-      view360: "/360/property4.html"
+      home: "https://um.mos.ru/quests/usadby-v-sovremennoy-moskve/",
+      image: "https://um.mos.ru/quests/usadby-v-sovremennoy-moskve/",
+      video: "https://um.mos.ru/quests/usadby-v-sovremennoy-moskve/",
+      view360: "https://um.mos.ru/quests/usadby-v-sovremennoy-moskve/"
     }
   },
   {
     id: 5,
     title: "Доходный дом Пантелеева",
-    description: "Трехэтажное здание с подвалом и мезонином на Старой Басманной улице было построено в 1874 году.",
+    description: "В XVIII–XIX столетиях усадьба сменила множество владельцев: от коллежского асессора Рахманова и капитана флота Бухвостова до купеческого семейства Котовых.",
     image: card2Img,
     tabletTitle: "Городская усадьба И.Т. Рахманова, Н.Л. Бухвостова, С...",
     tabletImage: card8Img,
@@ -125,10 +125,10 @@ export const cards = [
     showButton: false, 
     buttonText: "ПЕРЕЙТИ", 
     icons: {
-      home: "/icons/home.svg",
-      image: "/images/property5.jpg",
-      video: "/videos/property5.mp4",
-      view360: "/360/property5.html"
+      home: "https://um.mos.ru/houses/gorodskaya-usadba-i-t-rahmanova-s-1870-h-gg-sofiyskiy-mehanicheskiy-zavod-akcionernogo-obschestva-g-lista/",
+      image: "https://um.mos.ru/houses/gorodskaya-usadba-i-t-rahmanova-s-1870-h-gg-sofiyskiy-mehanicheskiy-zavod-akcionernogo-obschestva-g-lista/",
+      video: "https://um.mos.ru/houses/gorodskaya-usadba-i-t-rahmanova-s-1870-h-gg-sofiyskiy-mehanicheskiy-zavod-akcionernogo-obschestva-g-lista/",
+      view360: "https://um.mos.ru/houses/gorodskaya-usadba-i-t-rahmanova-s-1870-h-gg-sofiyskiy-mehanicheskiy-zavod-akcionernogo-obschestva-g-lista/"
     }
   },
   {
@@ -149,10 +149,10 @@ export const cards = [
     showButton: false, 
     buttonText: "ПЕРЕЙТИ", 
     icons: {
-      home: "/icons/home.svg",
-      image: "/images/property6.jpg",
-      video: "/videos/property6.mp4",
-      view360: "/360/property6.html"
+      home: "https://um.mos.ru/houses/dokhodnyy-dom-a-a-panteleeva/",
+      image: "https://um.mos.ru/houses/dokhodnyy-dom-a-a-panteleeva/",
+      video: "https://um.mos.ru/houses/dokhodnyy-dom-a-a-panteleeva/",
+      view360: "https://um.mos.ru/houses/dokhodnyy-dom-a-a-panteleeva/"
     }
   }
 ];
