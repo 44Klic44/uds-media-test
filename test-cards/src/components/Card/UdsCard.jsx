@@ -133,6 +133,15 @@ const UdsCard = ({
               <span className={styles.infoMetro}>{metro}</span>
             </div>
           </div>
+         
+            <div className={styles.infoDistanmob} >
+              <svg className={styles.infoIcon} width="13.39" height="15" color='#818181'><use xlinkHref="#uds-icon-distance" /></svg>
+              <span className={styles.infoText}>{distance}</span>
+            </div>
+         
+
+
+  
 
           <div className={styles.ratingRow}>
             <UdsRating value={rating} />

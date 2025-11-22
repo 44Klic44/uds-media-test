@@ -7,6 +7,10 @@
   font-family: $font-roboto-regular;
   font-size: 14px;
   color: $uds-text-dark;
+
+  @media (max-width: 1080px){
+    margin-top: 10px;
+  }
 }
 
 .stars {
