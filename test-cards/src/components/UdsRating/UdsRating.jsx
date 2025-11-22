@@ -20,7 +20,7 @@ const UdsRating = ({ value = 0 }) => {
     <div className={styles.rating}>
       <div className={styles.stars}>
         {stars.map((type, idx) => (
-          <svg 
+          <svg  aria-label="Рейтинг культурного объекта"
             key={idx} 
             className={styles.starSvg} 
             width="16" 

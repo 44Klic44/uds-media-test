@@ -79,7 +79,6 @@
   }
 }
 
-/* Кнопка "Подробнее" для мобильных и планшетов */
 .mobileDetailsButton {
   position: absolute;
   bottom: 15px;
@@ -98,8 +97,6 @@
   z-index: 10;
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
-  
-  /* Скрываем только на десктопе (1081px и выше) */
   @media (min-width: 1081px) {
     display: none;
   }
@@ -113,8 +110,6 @@
     opacity: 0.7;
   }
 }
-
-/* Стили для десктопного описания */
 .bottomOverlay {
   position: absolute;
   left: 0;
@@ -275,16 +270,12 @@ margin-left: 30px;
     transform: scale(0.9);
   }
 }
-
-/* Стили для контента внутри модалки */
 .modalContentWrapper {
   padding: 10px 0;
 }
-
 .modalMeta {
   margin-bottom: 20px;
 }
-
 .modalAddress {
   display: flex;
   align-items: center;
@@ -357,7 +348,6 @@ height: 17px;
 }
 }
 
-
 @media (max-width: 1024px) {
   .card {
     width: 340px;
@@ -368,40 +358,25 @@ height: 17px;
   .title { font-size: 20px; }
 }
 
-
-
-
-
 .infoContainer {
   display: flex;
   flex-direction: column;
 }
 
-/* CSS Modules */
 .infoWrapper {
   display: block;
 }
-
 
 .heartFavorite{
  width: 26px;
   height: 24px; 
 }
 
-
-
-
-/* Планшетная версия (768px - 1024px) */
 @media (max-width: 1080px) and (min-width: 687px) {
 .infoDistanmob{
   display: flex;
 
-
-  
 }
-
-
-
   .uds-cards-grid {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -423,7 +398,7 @@ height: 17px;
     height: 277px;
     flex-shrink: 0;
     border-radius: 4px 0 0 4px;
-    position: relative; /* Добавляем для позиционирования кнопки */
+    position: relative; 
   }
 
   .body {
@@ -462,12 +437,10 @@ height: 17px;
     display: none;
   }
 
-  /* На планшете скрываем описание при ховере */
   .bottomOverlay {
     display: none;
   }
 
-  /* Корректируем иконки на изображении для планшета */
   .homeIcon {
     left: 12px;
             top: 14px;
@@ -521,7 +494,6 @@ display: none;
     margin-top: 8px;
   }
   
-
 }
 
 @media (max-width: 687px) and (min-width: 480px) {

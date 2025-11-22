@@ -18,7 +18,7 @@ const UdsCard = ({
   showButton = false, 
   buttonText = "ПЕРЕЙТИ",
   icons = {},
-  tabletTitle,     // добавляем новые пропсы
+  tabletTitle,     
   tabletImage,
   mobileTitle,
   mobileImage
@@ -26,7 +26,7 @@ const UdsCard = ({
   const [isFav, setIsFav] = useState(!!favorite)
   const [hovered, setHovered] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [deviceType, setDeviceType] = useState('desktop') // 'desktop', 'tablet', 'mobile'
+  const [deviceType, setDeviceType] = useState('desktop') 
 
   useEffect(() => {
     const checkDeviceType = () => {
@@ -45,7 +45,6 @@ const UdsCard = ({
     return () => window.removeEventListener('resize', checkDeviceType)
   }, [])
 
-  // Функция для получения данных в зависимости от устройства
   const getCurrentData = () => {
     if (deviceType === 'tablet') {
       return {
@@ -75,7 +74,6 @@ const UdsCard = ({
     setIsModalOpen(false)
   }
 
-  // Получаем актуальные данные для текущего устройства
   const currentData = getCurrentData()
   const currentTitle = currentData.title
   const currentImage = currentData.image
@@ -88,53 +86,42 @@ const UdsCard = ({
         onMouseLeave={() => deviceType === 'desktop' && setHovered(false)}
       >
         <div className={styles.imageWrap}>
-          {/* Используем currentImage вместо image */}
-          <img src={currentImage} alt={currentTitle} className={styles.image} />
-
-          {/* home icon */}
+          <img src={currentImage} alt={title} className={styles.image} />
           <div className={styles.homeIcon}>
-            <svg color="#FF5D54">
+            <svg aria-label="Перейти на страницу культурного обьекта" color="#FF5D54">
               <use xlinkHref="#uds-icon-home" />
             </svg>
           </div>
-
-          {/* 3 icons */}
           <div className={styles.topIcons}>
             <div className={styles.topIconsInner}>
-              <svg className={styles.topIconsGallery} aria-hidden="true" > <use xlinkHref="#uds-icon-image" /></svg>
-              <svg className={styles.topIconsGradus} aria-hidden="true" > <use xlinkHref="#uds-icon-360" /></svg>
-              <svg className={styles.topIconsVideo} aria-hidden="true" > <use xlinkHref="#uds-icon-video" /></svg>
+              <svg aria-label="Открыть галереию изображений культурного объекта" className={styles.topIconsGallery} aria-hidden="true" > <use xlinkHref="#uds-icon-image" /></svg>
+              <svg aria-label="Круговой обзор культурного объекта в 360 градусов" className={styles.topIconsGradus} aria-hidden="true" > <use xlinkHref="#uds-icon-360" /></svg>
+              <svg aria-label="Видео экскурсия культурного объекта" className={styles.topIconsVideo} aria-hidden="true" > <use xlinkHref="#uds-icon-video" /></svg>
             </div>
           </div>
-
-          {/* Для десктопа: описание при ховере */}
           { description && deviceType === 'desktop' && (
             <div className={`${styles.bottomOverlay} ${hovered ? styles.visible : ''}`}>
               <p className={styles.description}>{description}</p>
             </div>
           )}
-
-          {/* Для мобильных: кнопка открытия попапа */}
           { description && deviceType !== 'desktop' && (
             <button 
               className={styles.mobileDetailsButton}
               onClick={openModal}
-              aria-label="Подробнее о объекте"
+              aria-label="Подробнее о культурном объекте"
             >
               <span>Подробнее</span>
             </button>
           )}
         </div>
-
         <div className={styles.body}>
           <div className={styles.titleRow}>
-            {/* Используем currentTitle вместо title */}
             <h3 className={styles.title}>{currentTitle}</h3>
-            <button 
+            <button  aria-label="Добавить в избранное"
               className={styles.iconsHeart} 
               onClick={toggleFav}
             >
-              <svg className={styles.heartFavorite} >
+              <svg aria-label="Добавить в избранное" className={styles.heartFavorite} >
                 {isFav ? (
                   <use xlinkHref="#uds-icon-heart-filled" />
                 ) : (
@@ -143,63 +130,55 @@ const UdsCard = ({
               </svg>
             </button>
           </div>
-
           {showButton && (
             <div className={styles.ctaWrap}>
               <UdsButton as="a" href={link}>{buttonText}</UdsButton>
             </div>
           )}
-
           <div className={styles.infoLine}>
             <div className={styles.infoItem}>
-              <svg className={styles.infoIcon} width="15" height="18" color='#818181'><use xlinkHref="#uds-icon-address" /></svg>
+              <svg aria-label="Адрес культурного объекта" className={styles.infoIcon} width="15" height="18" color='#818181'><use xlinkHref="#uds-icon-address" /></svg>
               <span className={styles.infoText}>{address}</span>
             </div>
             <div className={styles.infoDistance} >
-              <svg className={styles.infoIcon} width="13.39" height="15" color='#818181'><use xlinkHref="#uds-icon-distance" /></svg>
+              <svg aria-label="Расстояние до культурного объекта" className={styles.infoIcon} width="13.39" height="15" color='#818181'><use xlinkHref="#uds-icon-distance" /></svg>
               <span className={styles.infoText}>{distance}</span>
             </div>
           </div>
-
           <div className={styles.infoMetro}>
             <div className={styles.infoItem}>
-              <svg className={styles.infoIcon} width="22" height="32" color='#818181'><use xlinkHref="#uds-icon-metro" /></svg>
+              <svg aria-label="Ближайшее метро возле культурного объекта" className={styles.infoIcon} width="22" height="32" color='#818181'><use xlinkHref="#uds-icon-metro" /></svg>
               <span className={styles.infoMetro}>{metro}</span>
             </div>
           </div>
          
           <div className={styles.infoDistanmob} >
-            <svg className={styles.infoIcon} width="13.39" height="15" color='#818181'><use xlinkHref="#uds-icon-distance" /></svg>
+            <svg aria-label="Расстояние до культурного объекта" className={styles.infoIcon} width="13.39" height="15" color='#818181'><use xlinkHref="#uds-icon-distance" /></svg>
             <span className={styles.infoText}>{distance}</span>
           </div>
-
           <div className={styles.ratingRow}>
             <UdsRating value={rating} />
           </div>
         </div>
       </article>
-
-      {/* Модальное окно - используем currentTitle */}
       <UdsModal
         isOpen={isModalOpen}
         onClose={closeModal}
-        title={currentTitle}  // Используем currentTitle
+        title={currentTitle} 
       >
         <div className={styles.modalContentWrapper}>
           <div className={styles.modalMeta}>
             <div className={styles.modalAddress}>
-              <svg width="16" height="16">
+              <svg width="16" height="16" aria-label="Адрес культурного обьекта"> 
                 <use xlinkHref="#uds-icon-address" />
               </svg>
               {address}
             </div>
           </div>
-          
           <div className={styles.modalDescription}>
             <h3 className={styles.descriptionTitle}>Описание</h3>
             <p>{description}</p>
           </div>
-          
           <div className={styles.modalActions}>
             <UdsButton 
               as="a" 
