@@ -17,22 +17,50 @@ const UdsCard = ({
   favorite,
   showButton = false, 
   buttonText = "ПЕРЕЙТИ",
-  icons = {}
+  icons = {},
+  tabletTitle,     // добавляем новые пропсы
+  tabletImage,
+  mobileTitle,
+  mobileImage
 }) => {
   const [isFav, setIsFav] = useState(!!favorite)
   const [hovered, setHovered] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
+  const [deviceType, setDeviceType] = useState('desktop') // 'desktop', 'tablet', 'mobile'
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 1024)
+    const checkDeviceType = () => {
+      const width = window.innerWidth
+      if (width <= 480) {
+        setDeviceType('mobile')
+      } else if (width <= 1080) {
+        setDeviceType('tablet')
+      } else {
+        setDeviceType('desktop')
+      }
     }
     
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    checkDeviceType()
+    window.addEventListener('resize', checkDeviceType)
+    return () => window.removeEventListener('resize', checkDeviceType)
   }, [])
+
+  // Функция для получения данных в зависимости от устройства
+  const getCurrentData = () => {
+    if (deviceType === 'tablet') {
+      return {
+        title: tabletTitle || title,
+        image: tabletImage || image
+      }
+    }
+    if (deviceType === 'mobile') {
+      return {
+        title: mobileTitle || title,
+        image: mobileImage || image
+      }
+    }
+    return { title, image }
+  }
 
   const toggleFav = (e) => {
     e.stopPropagation()
@@ -47,19 +75,25 @@ const UdsCard = ({
     setIsModalOpen(false)
   }
 
+  // Получаем актуальные данные для текущего устройства
+  const currentData = getCurrentData()
+  const currentTitle = currentData.title
+  const currentImage = currentData.image
+
   return (
     <>
       <article
         className={styles.card}
-        onMouseEnter={() => !isMobile && setHovered(true)}
-        onMouseLeave={() => !isMobile && setHovered(false)}
+        onMouseEnter={() => deviceType === 'desktop' && setHovered(true)}
+        onMouseLeave={() => deviceType === 'desktop' && setHovered(false)}
       >
         <div className={styles.imageWrap}>
-          <img src={image} alt={title} className={styles.image} />
+          {/* Используем currentImage вместо image */}
+          <img src={currentImage} alt={currentTitle} className={styles.image} />
 
           {/* home icon */}
           <div className={styles.homeIcon}>
-            <svg  color="#FF5D54">
+            <svg color="#FF5D54">
               <use xlinkHref="#uds-icon-home" />
             </svg>
           </div>
@@ -69,33 +103,33 @@ const UdsCard = ({
             <div className={styles.topIconsInner}>
               <svg className={styles.topIconsGallery} aria-hidden="true" > <use xlinkHref="#uds-icon-image" /></svg>
               <svg className={styles.topIconsGradus} aria-hidden="true" > <use xlinkHref="#uds-icon-360" /></svg>
-              <svg className={styles.topIconsVideo}  aria-hidden="true" > <use xlinkHref="#uds-icon-video" /></svg>
+              <svg className={styles.topIconsVideo} aria-hidden="true" > <use xlinkHref="#uds-icon-video" /></svg>
             </div>
           </div>
 
           {/* Для десктопа: описание при ховере */}
-          { description && (
+          { description && deviceType === 'desktop' && (
             <div className={`${styles.bottomOverlay} ${hovered ? styles.visible : ''}`}>
               <p className={styles.description}>{description}</p>
             </div>
           )}
 
           {/* Для мобильных: кнопка открытия попапа */}
-          { description && (
+          { description && deviceType !== 'desktop' && (
             <button 
               className={styles.mobileDetailsButton}
               onClick={openModal}
               aria-label="Подробнее о объекте"
             >
               <span>Подробнее</span>
-              
             </button>
           )}
         </div>
 
         <div className={styles.body}>
           <div className={styles.titleRow}>
-            <h3 className={styles.title}>{title}</h3>
+            {/* Используем currentTitle вместо title */}
+            <h3 className={styles.title}>{currentTitle}</h3>
             <button 
               className={styles.iconsHeart} 
               onClick={toggleFav}
@@ -110,11 +144,11 @@ const UdsCard = ({
             </button>
           </div>
 
-           {showButton && (
-  <div className={styles.ctaWrap}>
-    <UdsButton as="a" href={link}>{buttonText}</UdsButton>
-  </div>
-)}
+          {showButton && (
+            <div className={styles.ctaWrap}>
+              <UdsButton as="a" href={link}>{buttonText}</UdsButton>
+            </div>
+          )}
 
           <div className={styles.infoLine}>
             <div className={styles.infoItem}>
@@ -134,14 +168,10 @@ const UdsCard = ({
             </div>
           </div>
          
-            <div className={styles.infoDistanmob} >
-              <svg className={styles.infoIcon} width="13.39" height="15" color='#818181'><use xlinkHref="#uds-icon-distance" /></svg>
-              <span className={styles.infoText}>{distance}</span>
-            </div>
-         
-
-
-  
+          <div className={styles.infoDistanmob} >
+            <svg className={styles.infoIcon} width="13.39" height="15" color='#818181'><use xlinkHref="#uds-icon-distance" /></svg>
+            <span className={styles.infoText}>{distance}</span>
+          </div>
 
           <div className={styles.ratingRow}>
             <UdsRating value={rating} />
@@ -149,11 +179,11 @@ const UdsCard = ({
         </div>
       </article>
 
-      {/* Модальное окно для описания на мобильных */}
+      {/* Модальное окно - используем currentTitle */}
       <UdsModal
         isOpen={isModalOpen}
         onClose={closeModal}
-        title={title}
+        title={currentTitle}  // Используем currentTitle
       >
         <div className={styles.modalContentWrapper}>
           <div className={styles.modalMeta}>
