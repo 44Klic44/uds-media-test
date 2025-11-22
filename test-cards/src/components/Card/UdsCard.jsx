@@ -59,7 +59,7 @@ const UdsCard = ({
 
           {/* home icon */}
           <div className={styles.homeIcon}>
-            <svg width="58" height="59" color="#FF5D54">
+            <svg  color="#FF5D54">
               <use xlinkHref="#uds-icon-home" />
             </svg>
           </div>
@@ -67,9 +67,9 @@ const UdsCard = ({
           {/* 3 icons */}
           <div className={styles.topIcons}>
             <div className={styles.topIconsInner}>
-              <svg aria-hidden="true" width="22.47" height="19"> <use xlinkHref="#uds-icon-image" /></svg>
-              <svg aria-hidden="true" width="30" height="28"> <use xlinkHref="#uds-icon-360" /></svg>
-              <svg aria-hidden="true" width="22" height="14"> <use xlinkHref="#uds-icon-video" /></svg>
+              <svg className={styles.topIconsGallery} aria-hidden="true" > <use xlinkHref="#uds-icon-image" /></svg>
+              <svg className={styles.topIconsGradus} aria-hidden="true" > <use xlinkHref="#uds-icon-360" /></svg>
+              <svg className={styles.topIconsVideo}  aria-hidden="true" > <use xlinkHref="#uds-icon-video" /></svg>
             </div>
           </div>
 
@@ -121,7 +121,7 @@ const UdsCard = ({
               <svg className={styles.infoIcon} width="15" height="18" color='#818181'><use xlinkHref="#uds-icon-address" /></svg>
               <span className={styles.infoText}>{address}</span>
             </div>
-            <div className={styles.infoItem} style={{ marginLeft: 30 }}>
+            <div className={styles.infoDistance} >
               <svg className={styles.infoIcon} width="13.39" height="15" color='#818181'><use xlinkHref="#uds-icon-distance" /></svg>
               <span className={styles.infoText}>{distance}</span>
             </div>

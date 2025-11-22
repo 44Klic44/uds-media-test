@@ -200,6 +200,17 @@
   align-items: center;
 }
 
+.infoDistance{
+margin-left: 30px;
+ display: flex;
+  margin-top: 0px;
+  align-items: center;
+  color: $uds-text-grey;
+  font-family: $font-euclid-medium;
+  font-weight: $weight-medium;
+  font-size: 16px;
+  gap: 10px;
+}
 .infoItem {
   display: flex;
   align-items: center;
@@ -298,6 +309,32 @@
   width: 100%;
   justify-content: center;
 }
+.topIconsGallery{
+width: 25px;
+height: 20px;
+@media (max-width: 1080px){
+width: 20px;
+height: 17px;
+}
+}
+.topIconsGradus{
+width: 30px;
+height: 28px;
+
+@media (max-width: 1080px){
+  width: 22px;
+height: 17px;
+}
+}
+.topIconsVideo{
+width: 26px;
+height: 16px;
+@media (max-width: 1080px){
+  width: 20px;
+height: 17px;
+}
+}
+
 
 @media (max-width: 1024px) {
   .card {
@@ -396,9 +433,9 @@
   /* Корректируем иконки на изображении для планшета */
   .homeIcon {
     left: 12px;
-    top: 12px;
-    width: 50px;
-    height: 50px;
+            top: 14px;
+        width: 40px;
+        height: 38px;
     
     svg {
       width: 50px;
@@ -407,10 +444,10 @@
   }
 
   .topIcons {
-    right: 12px;
-    top: 12px;
-    width: 160px;
-    height: 50px;
+   right: 15px;
+        top: 14px;
+        width: 126px;
+        height: 34px;
   }
 
   .topIconsInner {
@@ -422,9 +459,14 @@
   }
 
   .infoLine {
-    margin-top: 6px;
+    margin-top: 4px;
+        flex-direction: column;
+    align-items: start;
   }
-
+.infoDistance{
+margin-left: 0px;
+margin-top: 13px;
+}
   .infoItem {
     font-size: 14px;
   }
