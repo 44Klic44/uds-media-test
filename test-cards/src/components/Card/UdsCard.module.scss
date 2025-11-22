@@ -190,6 +190,14 @@
 }
 .infoDistanmob{
   display: none;
+    align-items: center;
+  gap: 10px;
+  margin-top: 9px;
+  color: $uds-text-grey;
+  font-family: $font-euclid-medium;
+  font-weight: $weight-medium;
+  font-size: 16px;
+  line-height: 1;
 }
 .ctaVisible {
   height: 60px;
@@ -353,29 +361,13 @@ height: 17px;
   .card {
     width: 340px;
     height: auto;
+    margin: 0 auto;
   }
   .imageWrap { height: 260px; }
   .title { font-size: 20px; }
 }
 
-@media (max-width: 480px) {
-  .card {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  .imageWrap { height: 220px; }
-  .ctaWrap { height: 60px; }
-  .topIcons { right: 10px; top: 10px; width: 140px; height: 46px; }
-  .homeIcon { left: 12px; top: 12px; width: 50px; height: 50px; }
-  
-  .mobileDetailsButton {
-    bottom: 12px;
-    right: 12px;
-    padding: 8px 14px;
-    font-size: 13px;
-  }
-}
+
 
 
 
@@ -390,7 +382,10 @@ height: 17px;
 }
 
 
-
+.heartFavorite{
+ width: 26px;
+  height: 24px; 
+}
 
 
 
@@ -399,14 +394,7 @@ height: 17px;
 @media (max-width: 1080px) and (min-width: 687px) {
 .infoDistanmob{
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 9px;
-  color: $uds-text-grey;
-  font-family: $font-euclid-medium;
-  font-weight: $weight-medium;
-  font-size: 16px;
-  line-height: 1;
+
 
   
 }
@@ -470,6 +458,7 @@ height: 17px;
   .ctaWrap {
     margin-top: auto;
     margin-bottom: 0;
+    display: none;
   }
 
   /* На планшете скрываем описание при ховере */
@@ -534,5 +523,77 @@ display: none;
 
 }
 
+@media (max-width: 687px) and (min-width: 480px) {
+  .ctaWrap{
+  display: none;
+}
+}
 
+@media (max-width: 480px) {
+  .body{
+    padding: 8px 0px 18px 0px;
 
+  }
+  .iconsHeart{
+    padding: 3px 0px 0px 0px;
+  }
+  .title{
+    font-size: 18px;
+  }
+  .card {
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+  }
+  .imageWrap { 
+    height: 249px; border-radius: 4px; 
+  }
+  .ctaWrap { 
+    height: 60px;
+   }
+  .topIcons { 
+            right: 16px;
+        top: 15px;
+        width: 125px;
+        height: 35px;
+   }
+  .homeIcon { 
+    left: 12px; top: 12px; width: 41px; height: 41px;
+   }
+  
+  .mobileDetailsButton {
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+.infoDistance{
+  display: none;
+}
+  .infoDistanmob{
+  display: flex;
+  margin-top: 11px;
+}
+
+.topIconsInner{
+gap: 21px;
+
+}
+.heartFavorite{
+ width: 24px;
+  height: 22px; 
+}
+.infoItem{
+  margin-top: 2px;
+}
+
+.uds-cards-grid{
+  gap: 11px;
+}
+ .ctaWrap {
+    margin-top: auto;
+    margin-bottom: 0;
+    display: none;
+  }
+}

@@ -100,7 +100,7 @@ const UdsCard = ({
               className={styles.iconsHeart} 
               onClick={toggleFav}
             >
-              <svg width="26" height="24">
+              <svg className={styles.heartFavorite} >
                 {isFav ? (
                   <use xlinkHref="#uds-icon-heart-filled" />
                 ) : (
