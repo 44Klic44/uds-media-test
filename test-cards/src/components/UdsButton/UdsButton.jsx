@@ -9,6 +9,7 @@ const UdsButton = ({ children, as = 'button', href, ...rest }) => {
     )
   }
   return (
+    
     <button aria-label='Перейти к культурному объекту'  className={styles.button} {...rest}>
       {children}
     </button>

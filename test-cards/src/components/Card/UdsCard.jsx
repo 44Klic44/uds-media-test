@@ -174,7 +174,11 @@ const UdsCard = ({
         </div>
         <div className={styles.body}>
           <div className={styles.titleRow}>
-            <h3 className={styles.title}>{currentTitle}</h3>
+            <a href={link  || "#"} target="_blank" >          
+                 <h3 className={styles.title}>{currentTitle}</h3>
+            </a>
+         
+
             <button  aria-label="Добавить в избранное"
               className={styles.iconsHeart} 
               onClick={toggleFav}
